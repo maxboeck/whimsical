@@ -7,17 +7,19 @@ pagination:
 ---
 
 <div class="container">
+    <h1>Websites that spark joy.</h1>
+    
     {% if posts.length %}
-        <ol>
+        <ol class="postlist">
             {% for post in posts | reverse %}
-                <li class="h-entry">
+                <li class="postlist__item">
                     {% include "post.njk" %}
                 </li>
             {% endfor %}
         </ol>
 
         {% if pagination.nextPageHref %}
-            <nav>
+            <nav class="pagination">
                 <a href="{{ pagination.nextPageHref }}">older posts</a>
             </nav>
         {% endif %} 
