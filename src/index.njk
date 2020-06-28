@@ -1,9 +1,27 @@
 ---
 layout: base
-eleventyNavigation:
-  key: Home
+pagination:
+  data: collections.posts
+  size: 10
+  alias: posts
 ---
 
 <div class="container">
-    <h1>A blank 11ty project.</h1>
+    {% if posts.length %}
+        <ol>
+            {% for post in posts | reverse %}
+                <li class="h-entry">
+                    {% include "post.njk" %}
+                </li>
+            {% endfor %}
+        </ol>
+
+        {% if pagination.nextPageHref %}
+            <nav>
+                <a href="{{ pagination.nextPageHref }}">next page</a>
+            </nav>
+        {% endif %} 
+    {% else %}
+        <p>No Posts yet.</p>
+    {% endif %}
 </div>
