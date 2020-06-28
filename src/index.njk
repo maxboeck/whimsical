@@ -2,7 +2,7 @@
 layout: base
 pagination:
   data: collections.posts
-  size: 10
+  size: 20
   alias: posts
 ---
 
@@ -18,7 +18,7 @@ pagination:
 
         {% if pagination.nextPageHref %}
             <nav>
-                <a href="{{ pagination.nextPageHref }}">next page</a>
+                <a href="{{ pagination.nextPageHref }}">older posts</a>
             </nav>
         {% endif %} 
     {% else %}

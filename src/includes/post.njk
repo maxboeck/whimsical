@@ -1,5 +1,13 @@
 {% if post %}
-<div>
-    <a href="{{ post.data.url }}">{{ post.data.title }}</a>
-</div>
+    <figure>
+        {% if post.data.image %}
+            <a href="{{ post.data.url }}">
+                <img src="/assets/images/screenshots/{{ post.data.image }}" width="640" height="360" loading="lazy" alt="" />
+            </a>
+        {% endif %}
+        <figcaption>
+            {{ post.templateContent | safe }}
+        </figcaption>
+        <a href="{{ post.data.url }}">{{ post.data.title }}</a>
+    </figure>
 {% endif %}
