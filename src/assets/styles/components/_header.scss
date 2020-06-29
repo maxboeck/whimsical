@@ -1,6 +1,16 @@
 .header {
+    text-align: center;
+
+    &__logo {
+        color: $brand-brown;
+    }
+
     @include mq(lg) {
-        position: sticky;
-        top: 0;
+        text-align: left;
+
+        &__inner {
+            position: sticky;
+            top: 4rem;
+        }
     }
 }

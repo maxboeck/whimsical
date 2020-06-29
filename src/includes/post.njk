@@ -1,7 +1,7 @@
 {% if post %}
 <div class="post">
     <h2 class="post__title">
-        <a href="{{ post.data.url }}" class="post__link">{{ post.data.title }}</a>
+        <a href="{{ post.data.url }}" class="post__link">{% icon "arrow-right" %}{{ post.data.title }}</a>
     </h2>
     {% if post.data.image %}
     <figure class="post__figure">

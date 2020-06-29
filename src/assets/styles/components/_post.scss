@@ -1,16 +1,27 @@
 .post {
     &__image {
         max-width: 100%;
+        height: auto;
         object-fit: cover;
         border-radius: 0.5rem;
-        border: 1px solid $brand-cyan;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+
+        &:hover {
+            border-color: $brand-color-primary-offset;
+        }
     }
     &__title {
-        padding: 1rem;
         font-size: 1rem;
+        margin-bottom: 1rem;
     }
     &__link {
         display: flex;
+        align-items: center;
+
+        .icon {
+            color: $text-color;
+            margin-right: 0.25rem;
+        }
     }
     &__content {
         padding: 1rem;

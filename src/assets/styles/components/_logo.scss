@@ -1,0 +1,7 @@
+.logo {
+    fill: currentColor;
+
+    &:hover {
+        animation: tada 1s forwards;
+    }
+}
