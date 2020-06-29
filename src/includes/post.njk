@@ -1,13 +1,21 @@
 {% if post %}
-    <figure class="post">
-        {% if post.data.image %}
-            <a href="{{ post.data.url }}">
-                <img src="/assets/images/screenshots/{{ post.data.image }}" class="post__image" width="640" height="360" loading="lazy" alt="" />
-            </a>
-        {% endif %}
+<div class="post">
+    <h2 class="post__title">
+        <a href="{{ post.data.url }}" class="post__link">{{ post.data.title }}</a>
+    </h2>
+    {% if post.data.image %}
+    <figure class="post__figure">
+        <a href="{{ post.data.url }}" tabindex="-1">
+            <img src="/assets/images/screenshots/{{ post.data.image }}" class="post__image" width="640" height="360" loading="lazy" alt="" />
+        </a>
         <figcaption class="post__content">
             {{ post.templateContent | safe }}
         </figcaption>
-        <a href="{{ post.data.url }}" class="post__link">{{ post.data.title }}</a>
     </figure>
+    {% else %}
+    <div class="post__content">
+        {{ post.templateContent | safe }}
+    </div>
+    {% endif %}
+</div>
 {% endif %}

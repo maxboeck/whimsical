@@ -1,2 +1,22 @@
 .post {
+    &__image {
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        border: 1px solid $brand-cyan;
+    }
+    &__title {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    &__link {
+        display: flex;
+    }
+    &__content {
+        padding: 1rem;
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
 }

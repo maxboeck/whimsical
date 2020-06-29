@@ -6,24 +6,22 @@ pagination:
   alias: posts
 ---
 
-<div class="container">
-    <h1>Websites that spark joy.</h1>
-    
-    {% if posts.length %}
-        <ol class="postlist">
-            {% for post in posts | reverse %}
-                <li class="postlist__item">
-                    {% include "post.njk" %}
-                </li>
-            {% endfor %}
-        </ol>
+<h1>Websites that spark joy.</h1>
 
-        {% if pagination.nextPageHref %}
-            <nav class="pagination">
-                <a href="{{ pagination.nextPageHref }}">older posts</a>
-            </nav>
-        {% endif %} 
-    {% else %}
-        <p>No Posts yet.</p>
-    {% endif %}
-</div>
+{% if posts.length %}
+    <ol class="postlist">
+        {% for post in posts | reverse %}
+            <li class="postlist__item">
+                {% include "post.njk" %}
+            </li>
+        {% endfor %}
+    </ol>
+
+    {% if pagination.nextPageHref %}
+        <nav class="pagination">
+            <a href="{{ pagination.nextPageHref }}">older posts</a>
+        </nav>
+    {% endif %} 
+{% else %}
+    <p>No Posts yet.</p>
+{% endif %}

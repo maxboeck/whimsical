@@ -1,9 +1,6 @@
 .header {
-    padding: $spacing-y 0;
-
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    @include mq(lg) {
+        position: sticky;
+        top: 0;
     }
 }
