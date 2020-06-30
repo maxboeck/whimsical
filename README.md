@@ -1,57 +1,19 @@
-# Eleventastic
+# The Whimsical Web
 
-A simple Eleventy Starter Kit, my base for all new 11ty projects. ([Demo Site](https://eleventastic.netlify.com))
+A curated list of websites with an extra bit of fun.  
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5dbfbb5d-30af-4eb0-a732-7bcc3caf1315/deploy-status)](https://app.netlify.com/sites/thewhimsicalweb/deploys)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f78ec52d-8328-4e40-b6da-a0f9164e80d1/deploy-status)](https://app.netlify.com/sites/eleventastic/deploys)
+## Submit a Site
 
-## Features
+To add your website or another one you think should be featured to this list, [open an issue](https://github.com/maxboeck/whimsical/issues/new?template=add-this-website.md&title=Add+this+Website%21) in this repository. Include the website URL and (optionally) the author's twitter handle. Also, please describe why you think this website should be on the list.
 
-* CSS Pipeline (Sass, CleanCSS)
-* JS Bundling (Webpack)
-* SVG Icon Sprite Generation
-* Critical CSS
-* HTML Minification
-* No external builds, everything runs through 11ty
+That reason could be a fun feature, a cool effect or a clever bit of copy - check out the existing sites to get the feeling. The most important thing is that it's personal, quirky and fun. It's a curated list, so I'll check each one personally and if it's cool, I'll add it.
 
-## Getting Started
+## About
 
-To install the necessary packages, run this command in the root folder of the site:
+I made this project after reading ["In Defense of a Fussy Website"](https://css-tricks.com/in-defense-of-a-fussy-website/) by Sarah Drasner. It is meant to showcase how a more personal web could look like, and hopefully give you some inspiration to make your own corner of the web a bit weirder.
 
-```
-npm install
-````
+## Colophon
 
-__Commands__  
-
-* Run `npm start` for a development server and live reloading
-* Run `npm run build` to generate a production build
-
-Deploy a fork of this template to Netlify:
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/maxboeck/eleventastic) 
-
-## CSS
-
-Styling works with Sass. The main index file is in `src/assets/styles/main.scss`. Import any SCSS code you want in there; it will be processed and optimized. The output is in `dist/assets/styles/main.css`
-
-## JS
-
-Javascript can be written in ES6 syntax. The main index file is in `src/assets/scripts/main.js`. It will be transpiled to ES5 with babel, bundled together with webpack, and minified in production. The output is in `dist/assets/scripts/main.js`
-
-## SVG Icons
-
-All SVG files added to `src/assets/icons` will be bundled into a `symbol` sprite file. The SVG filename will then be used as the symbol identifier and the icon can be used as a shortcode.
-
-For example, if you have a `github.svg` file in that folder, you can display it anywhere by using `{% icon "github" %}` in your templates.
-
-## Critical CSS
-
-Currently, ciritcal CSS will only be inlined in the head of the homepage. This is done by using the [critical](https://github.com/addyosmani/critical) package in an automatic transform.
-
-## Credits
-
-My heartfelt thanks to these people, whom I shamelessly copied ideas from:
-
-* Phil Hawksworth: [EleventyOne](https://github.com/philhawksworth/eleventyone)
-* Mike Riethmuller: [Supermaya](https://github.com/MadeByMike/supermaya) 
-* Zach Leatherman: [zachleat.com](https://github.com/zachleat/zachleat.com)
+* Font "Escafina" by [Riley Cran / LostType](http://escafina.losttype.com/) (Personal Use)  
+* Confetti Cannon by [Kiril Vatev](https://www.kirilv.com/canvas-confetti/)
