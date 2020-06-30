@@ -6,13 +6,4 @@
         color: $brand-brown !important;
         margin-bottom: 1rem;
     }
-
-    @include mq(lg) {
-        text-align: left;
-
-        &__inner {
-            position: sticky;
-            top: 4rem;
-        }
-    }
 }
