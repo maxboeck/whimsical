@@ -1,8 +1,5 @@
 {% if post %}
 <div class="post">
-    <h2 class="post__title">
-        <a href="{{ post.data.url }}" class="post__link">{% icon "arrow-right" %}{{ post.data.title }}</a>
-    </h2>
     {% if post.data.image %}
     <figure class="post__figure">
         <a href="{{ post.data.url }}" tabindex="-1">
@@ -17,5 +14,17 @@
         {{ post.templateContent | safe }}
     </div>
     {% endif %}
+    <div class="post__meta">
+        <a href="{{ post.data.url }}" class="post__link">
+            {% icon "arrow-right" %}
+            {{ post.data.title }}
+        </a>
+        {% if post.data.twitter %}
+            <a href="https://twitter.com/{{ post.data.twitter }}" class="post__link">
+                {% icon "twitter" %}
+                @{{ post.data.twitter }}
+            </a>
+        {% endif %}
+    </div>
 </div>
 {% endif %}

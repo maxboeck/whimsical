@@ -6,9 +6,6 @@
         {%- set isCurrent = (item.url == page.url) -%}
         {%- set isParent = item.url != '/' and item.url in page.url -%}
         <li class="nav__item{% if isCurrent or isParent %} nav__item--active{% endif %}">
-            {% if item.icon %}
-                {% icon item.icon %}
-            {% endif %}
             <a
                 class="nav__link"
                 href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}"

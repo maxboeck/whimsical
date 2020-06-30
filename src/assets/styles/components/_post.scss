@@ -3,25 +3,23 @@
         max-width: 100%;
         height: auto;
         object-fit: cover;
-        border-radius: 0.5rem;
+        border-radius: 0.5rem 0.5rem 0 0;
         border: 1px solid rgba(0, 0, 0, 0.15);
 
         &:hover {
             border-color: $brand-color-primary-offset;
         }
     }
-    &__title {
-        font-size: 1rem;
-        margin-bottom: 1rem;
+    &__meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 1rem 1rem;
     }
     &__link {
         display: flex;
         align-items: center;
-
-        .icon {
-            color: $text-color;
-            margin-right: 0.25rem;
-        }
     }
     &__content {
         padding: 1rem;

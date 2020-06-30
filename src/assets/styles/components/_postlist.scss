@@ -1,7 +1,10 @@
 .postlist {
     max-width: 640px;
 
-    &__item {
-        margin-bottom: 2rem;
+    > * + * {
+        margin-top: 2rem;
+        @include mq(lg) {
+            margin-top: 4rem;
+        }
     }
 }
