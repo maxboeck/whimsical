@@ -1,10 +1,13 @@
 .post {
+    border-radius: 8px;
+    border: 1px solid $text-color;
+
     &__image {
         max-width: 100%;
         height: auto;
         object-fit: cover;
-        border-radius: 0.5rem 0.5rem 0 0;
-        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 6px 6px 0 0;
+        border-bottom: 1px solid $text-color;
 
         &:hover {
             border-color: $brand-color-primary-offset;
@@ -20,6 +23,10 @@
     &__link {
         display: flex;
         align-items: center;
+
+        .icon {
+            margin-right: 0.25rem;
+        }
     }
     &__content {
         padding: 1rem;
