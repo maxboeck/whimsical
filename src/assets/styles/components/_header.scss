@@ -2,10 +2,9 @@
     text-align: center;
 
     &__logo {
-        color: $brand-brown;
-    }
-    &__nav {
-        padding: 1rem 0;
+        display: block;
+        color: $brand-brown !important;
+        margin-bottom: 1rem;
     }
 
     @include mq(lg) {

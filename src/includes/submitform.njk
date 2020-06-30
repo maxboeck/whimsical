@@ -1,0 +1,26 @@
+{# A Contactform Component. Works with Netlify Forms. #}
+<form action="/join/submitted" class="form" name="join" method="POST" data-netlify="true" netlify-honeypot="hon3yp0t">
+    <fieldset class="form__fields">
+        <legend class="sr-only">Website Information</legend>
+        <p class="form__field">
+            <label for="id-input-name" class="form__label">Your URL:</label>
+            <input type="text" name="url" id="id-input-url" class="form__input" required />
+        </p>
+
+        <p class="form__field">
+            <label for="id-input-twitter" class="form__label">Your Twitter (optional):</label>
+            <input type="text" name="twitter" id="id-input-twitter" class="form__input" />
+        </p>
+        <p class="form__field">
+            <label for="id-input-msg" class="form__label">What's your weird whimsical web thing?</label>
+            <textarea name="msg" id="id-input-msg" class="form__input" cols="50" rows="5"></textarea>
+        </p>
+        <div class="sr-only" style="visibility:hidden" aria-hidden="true">
+            <label for="id-input-hp">Don’t fill this out if you're human:</label>
+            <input type="text" name="hon3yp0t" id="id-input-hp" tabindex="-1" value="" />
+        </div>
+    </fieldset>
+    <div class="form__action">
+        <button type="submit" class="btn btn--primary">Send Message</button>
+    </div>
+</form>

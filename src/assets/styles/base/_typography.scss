@@ -15,7 +15,7 @@ h1 {
     font-family: $font-family-display;
 
     @include mq(md) {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 }
 
@@ -41,8 +41,4 @@ a {
     font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.4;
-
-    @include mq(md) {
-        font-size: 2rem;
-    }
 }

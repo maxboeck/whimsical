@@ -2,6 +2,7 @@
     "title": "The Whimsical Web",
     "description": "A gallery of whimsical website features",
     "url": "https://whimsical.club",
+    "repo": "https://github.com/maxboeck/whimsical",
     "lang": "en",
     "locale": "en_us"
 }

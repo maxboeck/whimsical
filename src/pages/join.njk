@@ -1,11 +1,13 @@
 ---
-layout: base
+layout: page
+title: Welcome, Friend!
+description: "Have you made the web a bit more fun lately?<br />Then join the club!"
 permalink: /join/
-icon: pen
 eleventyNavigation:
   key: Join The Club
+  order: 1
 ---
 
-<h1>Welcome, Friend!</h1>
-<p class="lead">Have you made the web a bit more fun lately?</p>
-<p>Then join the club!</p>
+<p>See the <a href="{{ meta.repo }}">instructions on Github</a> to add your personal bit of whimsy to the list. Alternatively, you can use this form to submit your site and I'll have a look at it.</p>
+
+{% include "submitform.njk" %}

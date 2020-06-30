@@ -1,26 +1,25 @@
 ---
-layout: base
+layout: page
+title: Websites that spark joy.
+description: "A curated list of sites with a bit extra fun."
 pagination:
   data: collections.posts
-  size: 20
+  size: 15
   alias: posts
 ---
 
-<h1>Websites that spark joy.</h1>
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque, nulla eveniet magni dolores natus.</p>
-
 {% if posts.length %}
-    <ol class="postlist">
-        {% for post in posts | reverse %}
-            <li class="postlist__item">
+    <ol class="postlist js-infinitescroll-container">
+        {% for post in posts %}
+            <li class="postlist__item js-infinitescroll-item">
                 {% include "post.njk" %}
             </li>
         {% endfor %}
     </ol>
 
     {% if pagination.nextPageHref %}
-        <nav class="pagination">
-            <a href="{{ pagination.nextPageHref }}">older posts</a>
+        <nav class="pagination js-infinitescroll-pagination">
+            <a href="{{ pagination.nextPageHref }}" class="btn btn--primary js-infinitescroll-next">older posts</a>
         </nav>
     {% endif %} 
 {% else %}
