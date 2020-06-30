@@ -23,7 +23,8 @@ eleventyExcludeFromCollections: true
             <id>{{ post.data.url }}</id>
             <content type="html"><![CDATA[
                 {% if post.data.image %}<img src="{{ meta.url }}/assets/images/screenshots/{{ post.data.image }}" alt="" />{% endif %}
-                {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe }}
+                {{ post.templateContent | safe }}
+                <a href="{{ post.data.url }}">{{ post.data.url }}</a>
             ]]></content>
         </entry>
     {%- endfor -%}
