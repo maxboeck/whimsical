@@ -44,16 +44,17 @@ const sound = document.querySelector('.js-confetti-whistle')
 const triggers = document.querySelectorAll('.js-confetti-cannon')
 
 Array.from(triggers).forEach((trigger) => {
-    const rect = trigger.getBoundingClientRect()
-    const center = {
-        x: rect.left + rect.width / 2,
-        y: rect.top + rect.height / 2
-    }
-    const origin = {
-        x: center.x / window.innerWidth,
-        y: center.y / window.innerHeight
-    }
     trigger.addEventListener('click', () => {
+        const rect = trigger.getBoundingClientRect()
+        const center = {
+            x: rect.left + rect.width / 2,
+            y: rect.top + rect.height / 2
+        }
+        const origin = {
+            x: center.x / window.innerWidth,
+            y: center.y / window.innerHeight
+        }
+
         if (sound) {
             sound.currentTime = 0
             sound.play()
