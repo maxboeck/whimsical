@@ -55,6 +55,11 @@ module.exports = function (config) {
     config.addPassthroughCopy('src/assets/fonts')
     config.addPassthroughCopy('src/assets/audio')
 
+    // Collections: Posts
+    config.addCollection('posts', function (collection) {
+        return collection.getFilteredByGlob('src/posts/**/*.md').reverse()
+    })
+
     // Deep-Merge
     config.setDataDeepMerge(true)
 
