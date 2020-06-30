@@ -2,16 +2,23 @@
 <form action="/join/submitted" class="form" name="join" method="POST" data-netlify="true" netlify-honeypot="hon3yp0t">
     <fieldset class="form__fields">
         <legend class="sr-only">Website Information</legend>
+
+        <div class="row">
+            <div class="col-lg-50">
+                <p class="form__field">
+                    <label for="id-input-name" class="form__label">Your URL:</label>
+                    <input type="text" name="url" id="id-input-url" class="form__input" required />
+                </p>
+            </div>
+            <div class="col-lg-50">
+                <p class="form__field">
+                    <label for="id-input-twitter" class="form__label">Your Twitter (optional):</label>
+                    <input type="text" name="twitter" id="id-input-twitter" class="form__input" />
+                </p>
+            </div>
+        </div>
         <p class="form__field">
-            <label for="id-input-name" class="form__label">Your URL:</label>
-            <input type="text" name="url" id="id-input-url" class="form__input" required />
-        </p>
-        <p class="form__field">
-            <label for="id-input-twitter" class="form__label">Your Twitter (optional):</label>
-            <input type="text" name="twitter" id="id-input-twitter" class="form__input" />
-        </p>
-        <p class="form__field">
-            <label for="id-input-msg" class="form__label">What's your weird whimsical web thing?</label>
+            <label for="id-input-msg" class="form__label">What's your weird whimsical web thing<span aria-hidden="true">&trade;</span>?</label>
             <textarea name="msg" id="id-input-msg" class="form__input" cols="50" rows="5"></textarea>
         </p>
         <div class="sr-only" style="visibility:hidden" aria-hidden="true">

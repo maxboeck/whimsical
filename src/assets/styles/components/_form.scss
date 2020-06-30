@@ -1,0 +1,30 @@
+.form {
+    padding: 1rem 0;
+
+    &__field {
+        margin-bottom: 1rem;
+    }
+    &__label {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    &__input {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        font-family: $font-family-base;
+        font-weight: 400;
+        border: 1px solid $text-color;
+        color: $text-color;
+        background-color: $gray-lightest;
+
+        &:focus {
+            border: 1px solid $brand-color-primary;
+            background-color: #fff;
+        }
+    }
+    &__action {
+        text-align: right;
+    }
+}

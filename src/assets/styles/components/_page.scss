@@ -17,4 +17,8 @@
             transform: translateY(-4px);
         }
     }
+
+    &__content > * + * {
+        margin-top: 1rem;
+    }
 }

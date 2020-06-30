@@ -31,3 +31,24 @@ body {
     margin-right: auto;
     max-width: $container-max-width;
 }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+    [class^='col'] {
+        flex-basis: 100%;
+    }
+
+    @include mq(lg) {
+        margin-left: -1rem;
+        margin-right: -1rem;
+
+        .col-lg-50 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            flex-basis: 50%;
+            max-width: 50%;
+        }
+    }
+}
