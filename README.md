@@ -1,6 +1,8 @@
 # The Whimsical Web
 
 A curated list of websites with an extra bit of fun.  
+
+[whimsical.club](https://whimsical.club) 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5dbfbb5d-30af-4eb0-a732-7bcc3caf1315/deploy-status)](https://app.netlify.com/sites/thewhimsicalweb/deploys)
 
 ## Submit a Site
