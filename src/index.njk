@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Websites that spark joy.
+layout: base
+title: The Whimsical Web
 description: "A curated list of sites with a bit extra fun."
 pagination:
   data: collections.posts
@@ -8,20 +8,33 @@ pagination:
   alias: posts
 ---
 
-{% if posts.length %}
-    <ol class="postlist js-infinitescroll-container">
-        {% for post in posts %}
-            <li class="postlist__item js-infinitescroll-item">
-                {% include "post.njk" %}
-            </li>
-        {% endfor %}
-    </ol>
+<article class="page">
+    <header class="page__header">
+        <h1 class="page__title">
+            Websites that spark <button class="js-confetti-cannon">joy.</button>
+        </h1>
+        <p class="page__description lead">{{ description | safe }}</p>
+        <audio src="/assets/audio/whistle.mp3" class="js-confetti-whistle" preload="auto" hidden></audio>
+    </header>
+    <div class="page__content markdown">
+        
+        {% if posts.length %}
+            <ol class="postlist js-infinitescroll-container">
+                {% for post in posts %}
+                    <li class="postlist__item js-infinitescroll-item">
+                        {% include "post.njk" %}
+                    </li>
+                {% endfor %}
+            </ol>
 
-    {% if pagination.nextPageHref %}
-        <nav class="pagination js-infinitescroll-pagination">
-            <a href="{{ pagination.nextPageHref }}" class="btn btn--primary js-infinitescroll-next">older posts</a>
-        </nav>
-    {% endif %} 
-{% else %}
-    <p>No Posts yet.</p>
-{% endif %}
+            {% if pagination.nextPageHref %}
+                <nav class="pagination js-infinitescroll-pagination">
+                    <a href="{{ pagination.nextPageHref }}" class="btn btn--primary js-infinitescroll-next">older posts</a>
+                </nav>
+            {% endif %} 
+        {% else %}
+            <p>No Posts yet.</p>
+        {% endif %}
+
+    </div>
+</article>

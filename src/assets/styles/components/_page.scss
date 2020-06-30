@@ -3,4 +3,18 @@
     &__content {
         padding: 1rem 0;
     }
+
+    &__title > button {
+        display: inline;
+        border: 0;
+        padding: 0;
+        background: transparent;
+        transition: all 0.15s ease;
+        color: $brand-cyan;
+
+        &:hover {
+            color: lighten($brand-cyan, 5%);
+            transform: translateY(-5px);
+        }
+    }
 }
