@@ -10,7 +10,7 @@
 <meta property="og:description" content="{{ description  or meta.description }}">
 <meta property="og:url" content="{{ absolutePageUrl }}">
 <meta property="og:locale" content="{{ meta.locale }}">
-<meta name="twitter:card" content="{% if image -%}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="{{ '/assets/images/cover.jpg' | absoluteUrl(meta.url) }}">
 
 {# Favicon #}
