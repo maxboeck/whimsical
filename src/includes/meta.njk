@@ -11,9 +11,7 @@
 <meta property="og:url" content="{{ absolutePageUrl }}">
 <meta property="og:locale" content="{{ meta.locale }}">
 <meta name="twitter:card" content="{% if image -%}summary_large_image{% else %}summary{% endif %}">
-{%- if image -%}
-    <meta property="og:image" content="{{ image | url | absoluteUrl(meta.url) }}">
-{%- endif -%}
+<meta property="og:image" content="{{ '/assets/images/cover.jpg' | absoluteUrl(meta.url) }}">
 
 {# Favicon #}
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎉</text></svg>">
