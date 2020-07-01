@@ -16,6 +16,7 @@ pagination:
         <p class="page__description lead">{{ description | safe }}</p>
         <audio src="/assets/audio/whistle.mp3" class="js-confetti-whistle" preload="auto" hidden></audio>
     </header>
+
     <div class="page__content">
         
         {% if posts.length %}
@@ -36,11 +37,15 @@ pagination:
             <p>No Posts yet.</p>
         {% endif %}
 
-        <div class="u-align-center">
-            <p class="u-mb1">
-                That's all of them - for now.<br />Know a site that should be on this list?
-            </p>
-            <a href="/join" class="btn btn--primary">Submit it!</a>
+        <div class="js-infinitescroll-status">
+            <div class="infinite-scroll-request u-align-center">
+                {% include "spinner.njk" %}
+            </div>
+            <div class="infinite-scroll-last u-align-center">
+                <p class="u-mb1">That's all of them - for now.<br />Know a site that should be on this list?</p>
+                <a href="/join" class="btn btn--primary">Submit it!</a>
+            </div>
         </div>
+
     </div>
 </article>

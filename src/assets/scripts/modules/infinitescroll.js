@@ -4,7 +4,8 @@ const SELECTORS = {
     container: '.js-infinitescroll-container',
     item: '.js-infinitescroll-item',
     pagination: '.js-infinitescroll-pagination',
-    nextLink: '.js-infinitescroll-next'
+    nextLink: '.js-infinitescroll-next',
+    status: '.js-infinitescroll-status'
 }
 
 function infscroll() {
@@ -15,7 +16,8 @@ function infscroll() {
         new InfiniteScroll(container, {
             path: SELECTORS.nextLink,
             append: SELECTORS.item,
-            hideNav: SELECTORS.pagination
+            hideNav: SELECTORS.pagination,
+            status: SELECTORS.status
         })
     }
 }

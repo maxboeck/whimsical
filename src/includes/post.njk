@@ -2,7 +2,7 @@
 <div class="post">
     {% if post.data.image %}
     <figure class="post__figure">
-        <a href="{{ post.data.url }}" tabindex="-1">
+        <a href="{{ post.data.url }}" class="post__imagelink" tabindex="-1">
             <img src="/assets/images/screenshots/{{ post.data.image }}" class="post__image" width="640" height="360" loading="lazy" alt="" />
         </a>
         <figcaption class="post__content">

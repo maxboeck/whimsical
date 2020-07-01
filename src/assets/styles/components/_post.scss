@@ -4,15 +4,20 @@
     border: 1px solid $text-color;
 
     &__image {
+        @include coverall;
         max-width: 100%;
         height: auto;
         object-fit: cover;
         border-radius: 6px 6px 0 0;
+    }
+    &__imagelink {
+        display: block;
+        position: relative;
+        height: 0;
+        padding-top: 56.25%;
+        border-radius: 6px 6px 0 0;
         border-bottom: 1px solid $text-color;
-
-        &:hover {
-            border-color: $brand-color-primary-offset;
-        }
+        background-color: $gray-lightest;
     }
     &__meta {
         display: flex;
