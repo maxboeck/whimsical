@@ -1,0 +1,32 @@
+.confettibutton {
+    display: inline;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    transition: all 0.15s ease;
+    color: $brand-cyan;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        background: transparent url('/assets/images/clickme.svg') no-repeat 0 0;
+        background-size: contain;
+        width: 90px;
+        height: 30px;
+        position: absolute;
+        top: -10px;
+        left: 90%;
+        transform-origin: 0 100%;
+        transform: rotate(15deg);
+        transition: all 0.15s ease;
+    }
+
+    &:hover {
+        color: lighten($brand-cyan, 5%);
+
+        &::after {
+            transform: rotate(10deg);
+        }
+    }
+}
