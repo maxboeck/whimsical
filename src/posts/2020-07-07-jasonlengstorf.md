@@ -1,6 +1,6 @@
 ---
 title: jason.af
-date: 2020-07-06T23:59
+date: 2020-07-07T23:59
 url: https://www.jason.af/
 image: jasonlengstorf.jpg
 twitter: jlengstorf
