@@ -24,7 +24,8 @@
                 {% icon "twitter" %}
                 {{ post.data.twitter }}
             </a>
-        {% else if post.data.mastodonURL %}
+        {% endif %}
+        {% if post.data.mastodonURL %}
             <a href="{{ post.data.mastodonURL }}" class="post__link">
                 {% icon "mastodon" %}
                 {{ post.data.mastodonHandle }}
