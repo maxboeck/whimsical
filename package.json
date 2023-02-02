@@ -26,7 +26,7 @@
     "babel-loader": "^8.1.0",
     "canvas-confetti": "^1.2.0",
     "clean-css": "^4.2.3",
-    "critical": "^1.3.9",
+    "critical": "^5.0.4",
     "cssesc": "^3.0.0",
     "del-cli": "^3.0.0",
     "focus-trap": "^5.1.0",
